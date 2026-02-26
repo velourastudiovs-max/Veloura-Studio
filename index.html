@@ -1,13 +1,13 @@
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Veloura Studio &ndash; Cinematic Beauty Portfolio&lt;/title&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Veloura Studio – Cinematic Beauty Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-&lt;meta name=&quot;description&quot; content=&quot;Veloura Studio &ndash; Elevating Beauty Brands with Cinematic Storytelling. Luxury beauty reels and campaign visuals.&quot;&gt;
+<meta name="description" content="Veloura Studio – Elevating Beauty Brands with Cinematic Storytelling. Luxury beauty reels and campaign visuals.">
 
-&lt;style&gt;
+<style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 
 body{
@@ -216,130 +216,128 @@ opacity:.8;
 }
 
 footer a{color:#fff;text-decoration:none;font-weight:600}
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;header&gt;
-  &lt;div&gt;&lt;strong&gt;Veloura Studio&lt;/strong&gt;&lt;/div&gt;
-  &lt;nav&gt;
-    &lt;a href=&quot;#work&quot;&gt;Work&lt;/a&gt;
-    &lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+<header>
+  <div><strong>Veloura Studio</strong></div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-&lt;section class=&quot;hero&quot;&gt;
-  &lt;h1&gt;Elevating Beauty Brands with Cinematic Storytelling&lt;/h1&gt;
-  &lt;p&gt;AI Campaigns &bull; Creative Direction &bull; Luxury Reels &bull; Brand Visuals&lt;/p&gt;
+<section class="hero">
+  <h1>Elevating Beauty Brands with Cinematic Storytelling</h1>
+  <p>AI Campaigns • Creative Direction • Luxury Reels • Brand Visuals</p>
 
-  &lt;div class=&quot;cta&quot;&gt;
-    &lt;button class=&quot;btn&quot; id=&quot;hireBtn&quot;&gt;Hire Veloura Studio&lt;/button&gt;
-    &lt;a href=&quot;#work&quot; class=&quot;btn alt&quot;&gt;View Campaign Work&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
+  <div class="cta">
+    <button class="btn" id="hireBtn">Hire Veloura Studio</button>
+    <a href="#work" class="btn alt">View Campaign Work</a>
+  </div>
+</section>
 
-&lt;section class=&quot;section&quot; id=&quot;work&quot;&gt;
-  &lt;h2&gt;Campaigns &amp; Visual Stories&lt;/h2&gt;
-  &lt;div class=&quot;grid&quot; id=&quot;workGrid&quot;&gt;&lt;/div&gt;
-&lt;/section&gt;
+<section class="section" id="work">
+  <h2>Campaigns & Visual Stories</h2>
+  <div class="grid" id="workGrid"></div>
+</section>
 
-&lt;footer id=&quot;contact&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Varsha M | Veloura Studio&lt;/strong&gt;&lt;/p&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;mailto:velourastudiovs@gmail.com&quot;&gt;velourastudiovs@gmail.com&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;br&gt;
-  &lt;button class=&quot;btn&quot; id=&quot;partnershipBtn&quot;&gt;Start a Creative Partnership&lt;/button&gt;
-  &lt;br&gt;&lt;br&gt;
-  &lt;a href=&quot;https://www.instagram.com/veloura_studio_vs/&quot; target=&quot;_blank&quot;&gt;
+<footer id="contact">
+  <p><strong>Varsha M | Veloura Studio</strong></p>
+  <p>
+    <a href="mailto:velourastudiovs@gmail.com">velourastudiovs@gmail.com</a>
+  </p>
+  <br>
+  <button class="btn" id="partnershipBtn">Start a Creative Partnership</button>
+  <br><br>
+  <a href="https://www.instagram.com/veloura_studio_vs/" target="_blank">
     Follow on Instagram
-  &lt;/a&gt;
-&lt;/footer&gt;
+  </a>
+</footer>
 
-&lt;!-- lightbox --&gt;
-&lt;div id=&quot;lightbox&quot; onclick=&quot;closeLightbox()&quot;&gt;
-  &lt;div id=&quot;lightboxBox&quot; onclick=&quot;event.stopPropagation()&quot;&gt;
-    &lt;div id=&quot;lightboxContent&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;lb-actions&quot;&gt;
-      &lt;a id=&quot;watchBtn&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Watch on Instagram&lt;/a&gt;
-      &lt;button onclick=&quot;closeLightbox()&quot;&gt;Close&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<!-- lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <div id="lightboxBox" onclick="event.stopPropagation()">
+    <div id="lightboxContent"></div>
+    <div class="lb-actions">
+      <a id="watchBtn" href="#" target="_blank">Watch on Instagram</a>
+      <button onclick="closeLightbox()">Close</button>
+    </div>
+  </div>
+</div>
 
-&lt;script&gt;
-const INSTAGRAM_PROFILE = &quot;https://www.instagram.com/veloura_studio_vs/&quot;;
+<script>
+const INSTAGRAM_PROFILE = "https://www.instagram.com/veloura_studio_vs/";
 
 /* ONLY BEST REELS + BEST POSTS */
 
 const workItems = [
-  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DUyEBvlCZbI/&quot;},
-  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DUyFVjMielG/&quot;},
-  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DU2yWQLiXRW/&quot;},
+  {title:"Best Reel", type:"Reel", url:"https://www.instagram.com/reel/DUyEBvlCZbI/"},
+  {title:"Best Reel", type:"Reel", url:"https://www.instagram.com/reel/DUyFVjMielG/"},
+  {title:"Best Reel", type:"Reel", url:"https://www.instagram.com/reel/DU2yWQLiXRW/"},
 
-  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU4nfjXCWtl/&quot;},
-  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU8fSB0CeWD/&quot;},
-  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DVJVcCCidBR/&quot;},
-  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU9wEKZiUJj/&quot;}
+  {title:"Best Post", type:"Post", url:"https://www.instagram.com/p/DU4nfjXCWtl/"},
+  {title:"Best Post", type:"Post", url:"https://www.instagram.com/p/DU8fSB0CeWD/"},
+  {title:"Best Post", type:"Post", url:"https://www.instagram.com/p/DVJVcCCidBR/"},
+  {title:"Best Post", type:"Post", url:"https://www.instagram.com/p/DU9wEKZiUJj/"}
 ];
 
-const grid = document.getElementById(&quot;workGrid&quot;);
+const grid = document.getElementById("workGrid");
 
-workItems.forEach(item=&gt;{
-  const card = document.createElement(&quot;div&quot;);
-  card.className = &quot;card&quot;;
+workItems.forEach(item=>{
+  const card = document.createElement("div");
+  card.className = "card";
   card.innerHTML = `
-    &lt;div class=&quot;visual&quot;&gt;${item.type===&quot;Reel&quot;?&quot;🎬&quot;:&quot;📸&quot;}&lt;/div&gt;
-    &lt;div class=&quot;play&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polygon points=&quot;8,5 19,12 8,19&quot;/&gt;&lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;info&quot;&gt;
-      &lt;h3&gt;${item.title}&lt;/h3&gt;
-      &lt;p&gt;Instagram ${item.type}&lt;/p&gt;
-    &lt;/div&gt;
+    <div class="visual">${item.type==="Reel"?"🎬":"📸"}</div>
+    <div class="play">
+      <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+    </div>
+    <div class="info">
+      <h3>${item.title}</h3>
+      <p>Instagram ${item.type}</p>
+    </div>
   `;
-  card.onclick = ()=&gt;openLightbox(item.url);
+  card.onclick = ()=>openLightbox(item.url);
   grid.appendChild(card);
 });
 
 function openLightbox(url){
-  const box = document.getElementById(&quot;lightbox&quot;);
-  const content = document.getElementById(&quot;lightboxContent&quot;);
-  const clean = url.split(&quot;?&quot;)[0];
+  const box = document.getElementById("lightbox");
+  const content = document.getElementById("lightboxContent");
+  const clean = url.split("?")[0];
 
   content.innerHTML = `
-    &lt;iframe
-      src=&quot;${clean}embed&quot;
-      width=&quot;100%&quot;
-      height=&quot;480&quot;
-      frameborder=&quot;0&quot;
-      scrolling=&quot;no&quot;
-      allowfullscreen&gt;
-    &lt;/iframe&gt;
+    <iframe
+      src="${clean}embed"
+      width="100%"
+      height="480"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen>
+    </iframe>
   `;
 
-  document.getElementById(&quot;watchBtn&quot;).href = clean;
-  box.classList.add(&quot;active&quot;);
+  document.getElementById("watchBtn").href = clean;
+  box.classList.add("active");
 }
 
 function closeLightbox(){
-  document.getElementById(&quot;lightbox&quot;).classList.remove(&quot;active&quot;);
-  document.getElementById(&quot;lightboxContent&quot;).innerHTML = &quot;&quot;;
+  document.getElementById("lightbox").classList.remove("active");
+  document.getElementById("lightboxContent").innerHTML = "";
 }
 
 /* contact buttons */
 
-document.getElementById(&quot;hireBtn&quot;).onclick = ()=&gt;{
-  window.open(INSTAGRAM_PROFILE,&quot;_blank&quot;);
+document.getElementById("hireBtn").onclick = ()=>{
+  window.open(INSTAGRAM_PROFILE,"_blank");
 };
 
-document.getElementById(&quot;partnershipBtn&quot;).onclick = ()=&gt;{
-  window.open(INSTAGRAM_PROFILE,&quot;_blank&quot;);
+document.getElementById("partnershipBtn").onclick = ()=>{
+  window.open(INSTAGRAM_PROFILE,"_blank");
 };
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<div style="color: red">Word to HTML trial - please <a href="https://wordtohtml.net/site/payment">Go PRO</a> to get whole HTML.</div>
+</body>
+</html>
