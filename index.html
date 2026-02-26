@@ -1,0 +1,345 @@
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Veloura Studio &ndash; Cinematic Beauty Portfolio&lt;/title&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;meta name=&quot;description&quot; content=&quot;Veloura Studio &ndash; Elevating Beauty Brands with Cinematic Storytelling. Luxury beauty reels and campaign visuals.&quot;&gt;
+
+&lt;style&gt;
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+
+body{
+background:radial-gradient(1200px at 20% -10%,#3b1a6b,transparent 60%),
+radial-gradient(900px at 90% 10%,#0fd3ff22,transparent 60%),
+#07070c;
+color:#fff;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;top:0;left:0;right:0;
+z-index:50;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 28px;
+background:rgba(10,10,16,.6);
+backdrop-filter:blur(14px);
+}
+
+header nav a{
+color:#fff;
+text-decoration:none;
+margin-left:18px;
+font-weight:600;
+opacity:.9;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 80px;
+position:relative;
+}
+
+.hero h1{
+font-size:clamp(36px,6vw,64px);
+background:linear-gradient(90deg,#ff4fd8,#7aa2ff,#4dffe1);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:14px;
+}
+
+.hero p{
+opacity:.8;
+margin-bottom:32px;
+letter-spacing:.3px;
+}
+
+.hero .cta{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:14px 26px;
+border-radius:999px;
+border:none;
+font-weight:600;
+cursor:pointer;
+color:#fff;
+background:linear-gradient(135deg,#ff4fd8,#7b5cff);
+}
+
+.btn.alt{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.12);
+}
+
+.section{
+max-width:1200px;
+margin:90px auto;
+padding:0 22px;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:24px;
+letter-spacing:.4px;
+}
+
+/* work grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:22px;
+}
+
+.card{
+position:relative;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+background:#15151f;
+transition:.35s;
+}
+
+.card:hover{transform:translateY(-8px)}
+
+.visual{
+height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:54px;
+background:linear-gradient(135deg,#ff4fd8,#7b5cff);
+}
+
+.card:nth-child(2n) .visual{background:linear-gradient(135deg,#4df3ff,#7b5cff)}
+.card:nth-child(3n) .visual{background:linear-gradient(135deg,#ffb84d,#ff4fd8)}
+
+.info{
+padding:16px 18px;
+}
+
+.info h3{font-size:16px}
+.info p{font-size:13px;opacity:.7}
+
+.play{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(180deg,transparent,rgba(0,0,0,.5));
+opacity:0;
+transition:.3s;
+}
+
+.card:hover .play{opacity:1}
+
+.play svg{
+width:58px;height:58px;
+background:rgba(0,0,0,.6);
+border-radius:50%;
+padding:14px;
+fill:#fff;
+}
+
+/* lightbox */
+
+#lightbox{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:100;
+padding:20px;
+}
+
+#lightbox.active{display:flex}
+
+#lightboxBox{
+background:#000;
+border-radius:16px;
+padding:12px;
+max-width:430px;
+width:100%;
+}
+
+.lb-actions{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-top:10px;
+}
+
+.lb-actions a{
+flex:1;
+text-align:center;
+text-decoration:none;
+padding:10px 14px;
+border-radius:999px;
+font-weight:600;
+background:linear-gradient(135deg,#ff4fd8,#7b5cff);
+color:#fff;
+}
+
+.lb-actions button{
+flex:1;
+padding:10px 14px;
+border-radius:999px;
+border:none;
+cursor:pointer;
+font-weight:600;
+background:rgba(255,255,255,.1);
+color:#fff;
+}
+
+footer{
+padding:70px 20px;
+text-align:center;
+opacity:.8;
+}
+
+footer a{color:#fff;text-decoration:none;font-weight:600}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;div&gt;&lt;strong&gt;Veloura Studio&lt;/strong&gt;&lt;/div&gt;
+  &lt;nav&gt;
+    &lt;a href=&quot;#work&quot;&gt;Work&lt;/a&gt;
+    &lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;section class=&quot;hero&quot;&gt;
+  &lt;h1&gt;Elevating Beauty Brands with Cinematic Storytelling&lt;/h1&gt;
+  &lt;p&gt;AI Campaigns &bull; Creative Direction &bull; Luxury Reels &bull; Brand Visuals&lt;/p&gt;
+
+  &lt;div class=&quot;cta&quot;&gt;
+    &lt;button class=&quot;btn&quot; id=&quot;hireBtn&quot;&gt;Hire Veloura Studio&lt;/button&gt;
+    &lt;a href=&quot;#work&quot; class=&quot;btn alt&quot;&gt;View Campaign Work&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;section&quot; id=&quot;work&quot;&gt;
+  &lt;h2&gt;Campaigns &amp; Visual Stories&lt;/h2&gt;
+  &lt;div class=&quot;grid&quot; id=&quot;workGrid&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer id=&quot;contact&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Varsha M | Veloura Studio&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;mailto:velourastudiovs@gmail.com&quot;&gt;velourastudiovs@gmail.com&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;br&gt;
+  &lt;button class=&quot;btn&quot; id=&quot;partnershipBtn&quot;&gt;Start a Creative Partnership&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;a href=&quot;https://www.instagram.com/veloura_studio_vs/&quot; target=&quot;_blank&quot;&gt;
+    Follow on Instagram
+  &lt;/a&gt;
+&lt;/footer&gt;
+
+&lt;!-- lightbox --&gt;
+&lt;div id=&quot;lightbox&quot; onclick=&quot;closeLightbox()&quot;&gt;
+  &lt;div id=&quot;lightboxBox&quot; onclick=&quot;event.stopPropagation()&quot;&gt;
+    &lt;div id=&quot;lightboxContent&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;lb-actions&quot;&gt;
+      &lt;a id=&quot;watchBtn&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Watch on Instagram&lt;/a&gt;
+      &lt;button onclick=&quot;closeLightbox()&quot;&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+const INSTAGRAM_PROFILE = &quot;https://www.instagram.com/veloura_studio_vs/&quot;;
+
+/* ONLY BEST REELS + BEST POSTS */
+
+const workItems = [
+  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DUyEBvlCZbI/&quot;},
+  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DUyFVjMielG/&quot;},
+  {title:&quot;Best Reel&quot;, type:&quot;Reel&quot;, url:&quot;https://www.instagram.com/reel/DU2yWQLiXRW/&quot;},
+
+  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU4nfjXCWtl/&quot;},
+  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU8fSB0CeWD/&quot;},
+  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DVJVcCCidBR/&quot;},
+  {title:&quot;Best Post&quot;, type:&quot;Post&quot;, url:&quot;https://www.instagram.com/p/DU9wEKZiUJj/&quot;}
+];
+
+const grid = document.getElementById(&quot;workGrid&quot;);
+
+workItems.forEach(item=&gt;{
+  const card = document.createElement(&quot;div&quot;);
+  card.className = &quot;card&quot;;
+  card.innerHTML = `
+    &lt;div class=&quot;visual&quot;&gt;${item.type===&quot;Reel&quot;?&quot;🎬&quot;:&quot;📸&quot;}&lt;/div&gt;
+    &lt;div class=&quot;play&quot;&gt;
+      &lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polygon points=&quot;8,5 19,12 8,19&quot;/&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;info&quot;&gt;
+      &lt;h3&gt;${item.title}&lt;/h3&gt;
+      &lt;p&gt;Instagram ${item.type}&lt;/p&gt;
+    &lt;/div&gt;
+  `;
+  card.onclick = ()=&gt;openLightbox(item.url);
+  grid.appendChild(card);
+});
+
+function openLightbox(url){
+  const box = document.getElementById(&quot;lightbox&quot;);
+  const content = document.getElementById(&quot;lightboxContent&quot;);
+  const clean = url.split(&quot;?&quot;)[0];
+
+  content.innerHTML = `
+    &lt;iframe
+      src=&quot;${clean}embed&quot;
+      width=&quot;100%&quot;
+      height=&quot;480&quot;
+      frameborder=&quot;0&quot;
+      scrolling=&quot;no&quot;
+      allowfullscreen&gt;
+    &lt;/iframe&gt;
+  `;
+
+  document.getElementById(&quot;watchBtn&quot;).href = clean;
+  box.classList.add(&quot;active&quot;);
+}
+
+function closeLightbox(){
+  document.getElementById(&quot;lightbox&quot;).classList.remove(&quot;active&quot;);
+  document.getElementById(&quot;lightboxContent&quot;).innerHTML = &quot;&quot;;
+}
+
+/* contact buttons */
+
+document.getElementById(&quot;hireBtn&quot;).onclick = ()=&gt;{
+  window.open(INSTAGRAM_PROFILE,&quot;_blank&quot;);
+};
+
+document.getElementById(&quot;partnershipBtn&quot;).onclick = ()=&gt;{
+  window.open(INSTAGRAM_PROFILE,&quot;_blank&quot;);
+};
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div style="color: red">Word to HTML trial - please <a href="https://wordtohtml.net/site/payment">Go PRO</a> to get whole HTML.</div>
